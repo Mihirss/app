@@ -7,57 +7,57 @@ import {
     useMediaQuery,
 } from '@mui/material';
 
-import { makeStyles, useTheme } from '@mui/styles';
+// import { makeStyles, useTheme } from '@mui/styles';
 import { Link } from "react-router-dom";
 import DrawerComponent from './DrawerComponent';
 
-const useStyles = makeStyles((theme) => ({
-    navlinks: {
-        marginLeft: theme.spacing(5),
-        display: "flex",
-    },
-    logo: {
-        flexGrow: "1",
-        cursor: "pointer",
-    },
-    link: {
-        textDecoration: "none",
-        color: "white",
-        fontSize: "20px",
-        marginLeft: theme.spacing(20),
-        "&:hover": {
-            color: "yellow",
-            borderBottom: "1px solid white",
-        },
-    },
-}));
+// const useStyles = makeStyles((theme) => ({
+//     navlinks: {
+//         marginLeft: theme.spacing(5),
+//         display: "flex",
+//     },
+//     logo: {
+//         flexGrow: "1",
+//         cursor: "pointer",
+//     },
+//     link: {
+//         textDecoration: "none",
+//         color: "white",
+//         fontSize: "20px",
+//         marginLeft: theme.spacing(20),
+//         "&:hover": {
+//             color: "yellow",
+//             borderBottom: "1px solid white",
+//         },
+//     },
+// }));
 
 
 function Navbar() {
-    const classes = useStyles();
-    const theme = useTheme();
+    // const classes = useStyles();
+    // const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     return (
         <AppBar position="static">
             <CssBaseline />
             <Toolbar>
-                <Typography variant="h4" className={classes.logo}>
+                <Typography variant="h4" className="classes.logo">
                     Navbar
 
                 </Typography>
                 {isMobile ? (<DrawerComponent />) : (
-                    <div className={classes.navlinks}>
-                        <Link to="/" className={classes.link}>
+                    <div className="classes.navlinks">
+                        <Link to="/" className="classes.link">
                             Home
                         </Link>
-                        <Link to="/about" className={classes.link}>
+                        <Link to="/about" className="classes.link">
                             About
                         </Link>
-                        <Link to="/contact" className={classes.link}>
+                        <Link to="/contact" className="classes.link">
                             Contact
                         </Link>
-                        <Link to="/faq" className={classes.link}>
+                        <Link to="/faq" className="classes.link">
                             FAQ
                         </Link>
                     </div>
